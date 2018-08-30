@@ -100,6 +100,7 @@ var TurnerComponentDriver = (function () {
     };
     TurnerComponentDriver.prototype.defineIndexedChild = function (childDriver, selector, selectorIndex) {
         if (selectorIndex === void 0) { selectorIndex = 0; }
+        childDriver.$rootScope = this.$rootScope;
         this.childDrivers.push({
             selector: selector,
             selectorIndex: selectorIndex,
